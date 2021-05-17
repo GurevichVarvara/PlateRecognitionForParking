@@ -12,12 +12,12 @@
             <p class="lead fw-normal">Фото обрабатывается с учетом времени загрузки</p>
 
             <form method="post" enctype="multipart/form-data">
-                <div class="custom-file">
-                  <input type="image" name="plate" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Выберите файл</label>
+                {% csrf_token %}
+                <div style="margin-left: 25%;">
+                    <input type="file" name="plate">
                 </div>
 
-                <button class="btn my-2 btn-info" type="submit">Обработать</button>
+                <button class="btn my-3 btn-outline-dark" type="submit">Обработать</button>
             </form>
         </div>
 
@@ -25,4 +25,5 @@
             <div class="circle"></div>
         </div>
  </div>
+
 {% endblock %}
