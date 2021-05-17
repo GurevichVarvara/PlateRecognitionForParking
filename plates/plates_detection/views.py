@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from datetime import datetime
 
 from plates_detection.forms import ImageForm
-from plates_detection.models import Plate
 
 
 def load_plate(request):
@@ -17,6 +16,11 @@ def load_plate(request):
             plate.date = datetime.now()
             plate.img_title = str(int(datetime.now().timestamp()))
             plate.save()
+
+            return render(request,
+                          'plates_detection/plate_result.html',
+                          {'plate': plate,
+                           'recognition_result': True})
 
     return render(request,
                   'plates_detection/load_plate.html',
