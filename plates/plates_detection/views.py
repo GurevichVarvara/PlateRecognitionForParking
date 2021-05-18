@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime
 
 from plates_detection.forms import ImageForm
+from plates_detection.models import Plate
 
 
 def load_plate(request):
@@ -26,3 +27,10 @@ def load_plate(request):
                   'plates_detection/load_plate.html',
                   {'errors': errors,
                    'form': ImageForm()})
+
+
+def list_of_plates(request):
+    return render(request,
+                  'plates_detection/list.html',
+                  {'plates': Plate.objects.all(),
+                   'first_plate': Plate.objects.all().first()})
