@@ -14,7 +14,7 @@
       <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
             <h3 class="display-5">Номер: {{plate.name}}</h3>
-          <p class="lead">Время: {{plate.date|date:'H:m, d M Y'}}</p>
+          <p class="lead">Время: {{plate.date|date:'H:m, d m Y'}}</p>
         </div>
         <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 330px; border-radius: 21px 21px 0 0;">
             <img src="{{ plate.image.url}}" class="mt-4" alt="connect" style="height:85%; width: 60%;">

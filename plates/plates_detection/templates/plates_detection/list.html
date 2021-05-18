@@ -13,23 +13,20 @@
 
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item">
-              <a href="#" class="nav-link active m-1 p-3" aria-current="page">
-                <h3>Все</h3>
-              </a>
-
+          <li class="nav-item m-3 w-100">
+            <button type="button" class="btn btn-primary text-light w-75">
+              <h3>Все</h3>
+            </button>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light" aria-current="page">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          <li class="nav-item m-3">
+            <button type="button" class="btn btn-secondary text-light w-75">
               <h3>Прибывающие</h3>
-            </a>
+            </button>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light" aria-current="page">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          <li class="nav-item m-3">
+            <button type="button" class="btn btn-secondary text-light w-75">
               <h3>Уехавшие</h3>
-            </a>
+            </button>
           </li>
         </ul>
         <hr>
@@ -52,7 +49,7 @@
                 <img src="{{ plate.image.url}}" class="d-block" alt="..." style="width:100%;height:500px;">
                 <div class="carousel-caption d-none d-md-block alert-dark w-50 ml-auto mr-auto" style="opacity: .9; margin-top:30px;">
                   <h5 class="text-dark">Номер: {{plate.name}}</h5>
-                  <p class="text-dark">Время: {{plate.date|date:'H:m, d M Y'}}</p>
+                  <p class="text-dark">Время: {{plate.date|date:'H:m, d m Y'}}</p>
                 </div>
               </div>
 
