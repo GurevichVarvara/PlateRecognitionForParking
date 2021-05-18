@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'plates_detection',
+    'users',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+AUTH_USER_MODEL = 'users.User'
+
+AUTHENTICATION_BACKENDS = ['users.backends.UserBackend']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
