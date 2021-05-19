@@ -34,3 +34,9 @@ def list_of_plates(request):
                   'plates_detection/list.html',
                   {'plates': Plate.objects.all(),
                    'first_plate': Plate.objects.all().first()})
+
+
+def stat(request):
+    return render(request,
+                  'plates_detection/stat.html',
+                  {'a': [1,2,3]})
